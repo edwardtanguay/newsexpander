@@ -333,6 +333,7 @@
   }
   
   .term-card {
-    height: 170px;
+    height: auto;
+    min-height: 180px; /* Optional fallback minimum height for spacing consistency */
   }
 }

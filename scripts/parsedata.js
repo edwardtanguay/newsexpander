@@ -26,9 +26,20 @@ try {
       if (semiIndex === -1) {
         return { name: line, description: '' };
       }
+      const name = line.substring(0, semiIndex).trim()
+      const description = line.substring(semiIndex + 1).trim()
+      let formattedDescription = description
+      
+      if (description.length > 0) {
+        const lastChar = description[description.length - 1]
+        if (!['.', '!', '?'].includes(lastChar)) {
+          formattedDescription = description + '.'
+        }
+      }
+      
       return {
-        name: line.substring(0, semiIndex).trim(),
-        description: line.substring(semiIndex + 1).trim()
+        name,
+        description: formattedDescription
       };
     });
 

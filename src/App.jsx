@@ -39,13 +39,28 @@ function App() {
     return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}&sp=CAI%253D`
   }
 
-  // Derive up to 3 random pairs from current shuffled terms list dynamically
+  // Derive exactly 3 unique random pairs from current terms list
   const getComboPairs = (arr) => {
+    if (arr.length < 2) return []
     const pairs = []
-    const maxCombos = Math.min(3, Math.floor(arr.length / 2))
-    for (let i = 0; i < maxCombos; i++) {
-      pairs.push([arr[i * 2], arr[i * 2 + 1]])
+    const seenPairs = new Set()
+    let attempts = 0
+
+    while (pairs.length < 3 && attempts < 100) {
+      attempts++
+      const i = Math.floor(Math.random() * arr.length)
+      let j = Math.floor(Math.random() * arr.length)
+      while (i === j) {
+        j = Math.floor(Math.random() * arr.length)
+      }
+
+      const pairKey = [arr[i].name, arr[j].name].sort().join('::')
+      if (!seenPairs.has(pairKey)) {
+        seenPairs.add(pairKey)
+        pairs.push([arr[i], arr[j]])
+      }
     }
+
     return pairs
   }
   
@@ -124,7 +139,6 @@ function App() {
               className="term-card"
               style={{ '--index': index }}
             >
-              <div className="card-badge">Topic {index + 1}</div>
               <div className="card-content">
                 <h2 className="term-title" style={titleStyle}>{term.name}</h2>
                 {term.description && (
