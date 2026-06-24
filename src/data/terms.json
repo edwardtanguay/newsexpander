@@ -1,30 +1,62 @@
 [
   {
     "name": "semiotics",
-    "description": "this is the study of signs and symbols in communication and culture, a good tools for understanding meaning in our world at a deeper level."
+    "description": "this is the study of signs and symbols in communication and culture, a good tools for understanding meaning in our world at a deeper level.",
+    "showAll": false
   },
   {
     "name": "phenomenology",
-    "description": "it's the study of conscious experience, a fascinating dive into our unique human experience, also useful for improving concentration and learning skills."
+    "description": "it's the study of conscious experience, a fascinating dive into our unique human experience, also useful for improving concentration and learning skills.",
+    "showAll": false
   },
   {
     "name": "AOC",
-    "description": "it's astounding how someone so inarticulate can become a lawmaker of a world power, a springboard to understanding the shallownees of the American culture."
+    "description": "it's astounding how someone so inarticulate can become a lawmaker of a world power, a springboard to understanding the shallowness of the American culture.",
+    "showAll": false
   },
   {
     "name": "Trump",
-    "description": "he's a typical American who excels in scamming people in order to make money, a 21st century authoritarian and clown so skilled in deception that he was able to remove the faux-ethical mask that Americans try to hide behind, revealing the corruption of the Democrats, the Republicans, and the American people as a whole."
+    "description": "he's a typical American who excels in scamming people in order to make money, a 21st century authoritarian, narcissist and clown so skilled in deception that he was able to remove the faux-ethical mask that Americans try to hide behind, revealing the corruption of the Democrats, the Republicans, and the American people as a whole.",
+    "showAll": false
   },
   {
     "name": "Mormonism",
-    "description": "this is a powerful American scam operation with an international sales force that uses two-on-one persuation tactics, gaslighting, and typical religious lying-in-your-face strategies in order to drive membership and keep people bamboozled and trapped as paying members inside the cult."
+    "description": "this is a powerful American scam operation with an international sales force that uses two-on-one persuation tactics, gaslighting, and typical religious lying-in-your-face strategies in order to drive membership and keep people trapped as paying members inside the cult.",
+    "showAll": false
   },
   {
     "name": "Rumman Chowdhury",
-    "description": "she's a data scientist and former AI lead at Accenture, speaks on the future of AI."
+    "description": "she's a data scientist and former AI lead at Accenture, speaks on the future of AI, often with a positive, proactive outlook.",
+    "showAll": false
   },
   {
     "name": "Armin Ronacher",
-    "description": "he is an Austrian open-source programmer who created the Python web framework Flask."
+    "description": "he is an Austrian open-source programmer who created the Python web framework Flask, gives a lot of talks and has good perspectives on the Python ecosystem.",
+    "showAll": false
+  },
+  {
+    "name": "Hampton Catlin",
+    "description": "he is an American programmer who created Sass and Haml, most of the videos of him are talks he gave from back in the day before AI, so kind of a retro experience of how the developer community was before artificial intelligence.",
+    "showAll": true
+  },
+  {
+    "name": "Lou Andreas-Salomé",
+    "description": "she was a fascinating woman of the 19th century, a Russian-born psychoanalyst and well-traveled essayist whose diverse intellectual interests led to friendships with distinguished thinkers including Nietzsche, Freud, Paul Rée, and Rilke.",
+    "showAll": false
+  },
+  {
+    "name": "Taylor Otwell",
+    "description": "he is the creator of Laravel (2011), a bit of a bullshitter CEO type, but gives talks and has conversations with developers in which he has valuable perspectives from within the PHP ecosystem.",
+    "showAll": false
+  },
+  {
+    "name": "Kent Beck",
+    "description": "he is an older programmer (born 1961), the creator of test-driven development, founded extreme programming, an author or software design pattern books, a interesting speaker and has healthy views on programming in the age of AI.",
+    "showAll": false
+  },
+  {
+    "name": "Greg Lukianoff",
+    "description": "he is an American lawyer, journalist and free speech activist, he co-authored the book Coddling of the American Mind with Jonathan Haidt, he gives talks and interviews, open and insightful.",
+    "showAll": false
   }
 ]

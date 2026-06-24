@@ -17,31 +17,47 @@ try {
   }
 
   const fileContent = fs.readFileSync(termsFilePath, 'utf-8');
-  const terms = fileContent
-    .split(/\r?\n/)
-    .map(line => line.trim())
+  const rawLines = fileContent.split(/\r?\n/);
+  const linesToParse = [];
+  for (const line of rawLines) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('TODO') || trimmed.startsWith('`TODO') || trimmed.startsWith('``TODO')) {
+      break;
+    }
+    linesToParse.push(trimmed);
+  }
+
+  const terms = linesToParse
     .filter(line => line.length > 0)
     .map(line => {
-      const semiIndex = line.indexOf(';');
-      if (semiIndex === -1) {
-        return { name: line, description: '' };
+      const fields = line.split(';').map(field => field.trim()).filter(field => field.length > 0);
+      if (fields.length === 0) {
+        return null;
       }
-      const name = line.substring(0, semiIndex).trim()
-      const description = line.substring(semiIndex + 1).trim()
-      let formattedDescription = description
       
+      const name = fields[0];
+      const showAll = fields.some(field => field.startsWith('$'));
+      
+      let description = '';
+      if (fields.length > 1 && !fields[1].startsWith('$')) {
+        description = fields[1];
+      }
+      
+      let formattedDescription = description;
       if (description.length > 0) {
-        const lastChar = description[description.length - 1]
+        const lastChar = description[description.length - 1];
         if (!['.', '!', '?'].includes(lastChar)) {
-          formattedDescription = description + '.'
+          formattedDescription = description + '.';
         }
       }
       
       return {
         name,
-        description: formattedDescription
+        description: formattedDescription,
+        showAll
       };
-    });
+    })
+    .filter(Boolean);
 
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });

@@ -25,12 +25,15 @@ function App() {
   }
 
   const getYouTubeSearchUrl = (term) => {
+    if (term.showAll) {
+      return `https://www.youtube.com/results?search_query=${encodeURIComponent(term.name)}`
+    }
     const sixMonthsAgo = new Date()
     sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6)
     const yyyy = sixMonthsAgo.getFullYear()
     const mm = String(sixMonthsAgo.getMonth() + 1).padStart(2, '0')
     const dd = String(sixMonthsAgo.getDate()).padStart(2, '0')
-    const query = `${term} after:${yyyy}-${mm}-${dd}`
+    const query = `${term.name} after:${yyyy}-${mm}-${dd}`
     return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`
   }
 
@@ -133,7 +136,7 @@ function App() {
           return (
             <a
               key={term.name}
-              href={getYouTubeSearchUrl(term.name)}
+              href={getYouTubeSearchUrl(term)}
               target="_blank"
               rel="noopener noreferrer"
               className="term-card"
