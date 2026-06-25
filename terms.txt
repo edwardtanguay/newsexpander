@@ -6,7 +6,7 @@ Mormonism;this is a powerful American scam operation with an international sales
 Rumman Chowdhury; she's a data scientist and former AI lead at Accenture, speaks on the future of AI, often with a positive, proactive outlook.
 Armin Ronacher; he is an Austrian open-source programmer who created the Python web framework Flask, gives a lot of talks and has good perspectives on the Python ecosystem.
 Hampton Catlin; he is an American programmer who created Sass and Haml, most of the videos of him are talks he gave from back in the day before AI, so kind of a retro experience of how the developer community was before artificial intelligence;$showAll
-Lou Andreas-Salomé; she was a fascinating woman of the 19th century, a Russian-born psychoanalyst and well-traveled essayist whose diverse intellectual interests led to friendships with distinguished thinkers including Nietzsche, Freud, Paul Rée, and Rilke.
+Lou Andreas-Salomé; she was a fascinating woman of the 19th century, a Russian-born psychoanalyst and well-traveled essayist whose diverse intellectual interests led to friendships with thinkers including Nietzsche, Freud, Paul Rée, and Rilke.
 Taylor Otwell; he is the creator of Laravel (2011), a bit of a bullshitter CEO type, but gives talks and has conversations with developers in which he has valuable perspectives from within the PHP ecosystem
 Kent Beck; he is an older programmer (born 1961), the creator of test-driven development, founded extreme programming, an author or software design pattern books, a interesting speaker and has healthy views on programming in the age of AI.
 Greg Lukianoff;he is an American lawyer, journalist and free speech activist, he co-authored the book Coddling of the American Mind with Jonathan Haidt, he gives talks and interviews, open and insightful.
@@ -17,6 +17,12 @@ Greg Lukianoff;he is an American lawyer, journalist and free speech activist, he
 ``videos
 https://www.youtube.com/watch?v=OQ6erArvOSw;Why Censorship Is About to Get Much Worse;2026-03-11
 
+Chad
+Hamburg
+Steinberger
+HfBK Dresden
+
+DSA
 
 Karl Popper
 	- free speech	
@@ -27,7 +33,9 @@ Karl Popper
 	- Roy Fielding
 - tech
 	- Charles Hoskinson 
-	- https://blog.samaltman.com/
+	- https://blog.samaltman.com
+	
+- Amish
 - 
 	- podcast: your undivided attention
 - Tristan Harris
